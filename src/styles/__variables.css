@@ -1,0 +1,44 @@
+/********************************************************************************
+ * Copyright (c) 2026 Voguh
+ *
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************/
+
+:root {
+    /* <=========================[ FIELDS TO CSS ]==========================> */
+    --font-size: {{fontSize}}px;
+    --container-padding: {{containerPadding}}px;
+    --item-gap: {{itemGap}}px;
+
+    --bubble-background-color: {{bubbleBackgroundColor}};
+    --bubble-text-color: {{bubbleTextColor}};
+    --bubble-radius: {{bubbleRadius}}px;
+    --bubble-tail-radius: {{bubbleTailRadius}}px;
+    --bubble-padding-y: {{bubblePaddingY}}px;
+    --bubble-padding-x: {{bubblePaddingX}}px;
+    --bubble-max-width: {{bubbleMaxWidth}}px;
+    --pill-radius: {{pillRadius}}px;
+    --pill-tint-strength: {{pillTintStrength}}%;
+    --badge-size: {{badgeSize}}px;
+    --emote-size: {{emoteSize}}px;
+    --sticker-size: {{stickerSize}}px;
+
+    --avatar-size: {{avatarSize}}px;
+    --avatar-radius: {{avatarRadius}}px;
+
+    --entry-animation-duration: {{entryAnimationDuration}}ms;
+    --exit-animation-duration: {{exitAnimationDuration}}ms;
+
+    --streak-color: {{streakColor}};
+    --donate-color: {{donateColor}};
+    --sponsor-color: {{sponsorColor}};
+    --sponsor-gift-color: {{sponsorGiftColor}};
+    --raid-color: {{raidColor}};
+    --cheer-color: {{cheerColor}};
+    --redemption-color: {{redemptionColor}};
+    /* <=======================[ END FIELDS TO CSS ]========================> */
+}

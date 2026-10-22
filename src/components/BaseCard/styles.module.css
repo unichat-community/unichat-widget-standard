@@ -1,0 +1,104 @@
+/********************************************************************************
+ * Copyright (c) 2026 Voguh
+ *
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************/
+
+.card {
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.entering {
+    --animate-duration: var(--entry-animation-duration);
+}
+
+.leaving {
+    --animate-duration: var(--exit-animation-duration);
+}
+
+.avatar {
+    flex: none;
+    width: var(--avatar-size);
+    height: var(--avatar-size);
+    border-radius: var(--avatar-radius);
+    object-fit: cover;
+}
+
+.initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(var(--avatar-size) * 0.4);
+    font-weight: 700;
+    color: #121316;
+}
+
+.bubble {
+    min-width: 0;
+    max-width: var(--bubble-max-width);
+    padding: var(--bubble-padding-y) var(--bubble-padding-x);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--bubble-background-color);
+    color: var(--bubble-text-color);
+    border-radius: var(--bubble-radius) var(--bubble-radius) var(--bubble-radius) var(--bubble-tail-radius);
+    box-shadow: 0 2px 10px rgb(0 0 0 / 30%);
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.pill {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 8px 3px 6px;
+    background: color-mix(in srgb, var(--accent) var(--pill-tint-strength), var(--bubble-background-color));
+    color: var(--accent);
+    border-radius: var(--pill-radius);
+    font-size: 0.8em;
+    font-weight: 700;
+}
+
+.head {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.87em;
+    font-weight: 700;
+}
+
+.head > * {
+    flex-shrink: 0;
+}
+
+.name {
+    flex-shrink: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.badge {
+    width: var(--badge-size);
+    height: var(--badge-size);
+}
+
+.emote {
+    height: var(--emote-size);
+    vertical-align: middle;
+}
+
+.sticker {
+    align-self: flex-start;
+    max-width: var(--sticker-size);
+    max-height: var(--sticker-size);
+}

@@ -1,0 +1,78 @@
+/********************************************************************************
+ * Copyright (c) 2026 Voguh
+ *
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************/
+
+.scrollArea {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+
+.viewport {
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.viewport::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    box-sizing: border-box;
+    min-height: 100%;
+    padding: var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: var(--item-gap);
+    overflow: clip;
+}
+
+.edge {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 3em;
+    padding: 0.5em;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 150ms;
+}
+
+.top {
+    top: 0;
+    align-items: flex-start;
+    background: linear-gradient(rgb(0 0 0 / 20%), transparent);
+}
+
+.bottom {
+    bottom: 0;
+    align-items: flex-end;
+    background: linear-gradient(transparent, rgb(0 0 0 / 20%));
+}
+
+.visible {
+    opacity: 1;
+}
+
+.arrow {
+    width: 2em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0 0 0 / 60%);
+    color: #ffffff;
+    border-radius: 50%;
+    font-size: 0.75em;
+}

@@ -1,0 +1,40 @@
+/********************************************************************************
+ * Copyright (c) 2026 Voguh
+ *
+ * This program and the accompanying materials are made
+ * available under the terms of the Eclipse Public License 2.0
+ * which is available at https://www.eclipse.org/legal/epl-2.0/
+ *
+ * SPDX-License-Identifier: EPL-2.0
+ ******************************************************************************/
+
+@import "./__variables.css";
+
+html,
+body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+body {
+    font-family: "DM Sans", system-ui, sans-serif;
+    font-size: var(--font-size);
+    color: var(--bubble-text-color);
+}
+
+#main-container {
+    box-sizing: border-box;
+    height: 100%;
+    padding: var(--container-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: var(--item-gap);
+    overflow: hidden;
+}
+
+#main-container.obs-dock {
+    padding: 0;
+}

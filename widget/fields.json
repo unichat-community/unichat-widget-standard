@@ -1,3 +1,549 @@
 {
-    "$schema": "../node_modules/@voguh/unichat-api/widgets/fields-schema.json"
+    "$schema": "../node_modules/@voguh/unichat-api/widgets/fields-schema.json",
+
+    "__general": "<==========================================================>",
+
+    "maxMessages": {
+        "type": "number",
+        "group": "General",
+        "label": "Max messages",
+        "description": "Ignored in OBS dock.",
+        "value": 50,
+        "min": 1,
+        "step": 1
+    },
+    "messageLifetime": {
+        "type": "number",
+        "group": "General",
+        "label": "Message lifetime (seconds)",
+        "description": "0 keeps messages until the max messages limit is reached. Ignored in OBS dock.",
+        "value": 0,
+        "min": 0,
+        "step": 1
+    },
+    "fontSize": {
+        "type": "number",
+        "group": "General",
+        "label": "Font size (px)",
+        "value": 14,
+        "min": 8,
+        "step": 1
+    },
+    "containerPadding": {
+        "type": "number",
+        "group": "General",
+        "label": "Screen padding (px)",
+        "value": 8,
+        "min": 0,
+        "step": 1
+    },
+    "itemGap": {
+        "type": "number",
+        "group": "General",
+        "label": "Gap between messages (px)",
+        "value": 8,
+        "min": 0,
+        "step": 1
+    },
+
+    "__bubble": "<===========================================================>",
+
+    "bubbleBackgroundColor": {
+        "type": "colorpicker",
+        "group": "Bubble",
+        "label": "Background color",
+        "value": "#1e2024"
+    },
+    "bubbleTextColor": {
+        "type": "colorpicker",
+        "group": "Bubble",
+        "label": "Text color",
+        "value": "#eef0f3"
+    },
+    "bubbleRadius": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Corner radius (px)",
+        "value": 8,
+        "min": 0,
+        "step": 1
+    },
+    "bubbleTailRadius": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Bottom left corner radius (px)",
+        "value": 2,
+        "min": 0,
+        "step": 1
+    },
+    "bubblePaddingY": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Vertical padding (px)",
+        "value": 10,
+        "min": 0,
+        "step": 1
+    },
+    "bubblePaddingX": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Horizontal padding (px)",
+        "value": 14,
+        "min": 0,
+        "step": 1
+    },
+    "bubbleMaxWidth": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Max width (px)",
+        "value": 340,
+        "min": 100,
+        "step": 1
+    },
+    "pillRadius": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Event label radius (px)",
+        "value": 4,
+        "min": 0,
+        "step": 1
+    },
+    "pillTintStrength": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Event label tint (%)",
+        "value": 22,
+        "min": 0,
+        "max": 100,
+        "step": 1
+    },
+    "badgeSize": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Badge size (px)",
+        "value": 14,
+        "min": 0,
+        "step": 1
+    },
+    "emoteSize": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Emote size (px)",
+        "value": 22,
+        "min": 8,
+        "step": 1
+    },
+    "stickerSize": {
+        "type": "number",
+        "group": "Bubble",
+        "label": "Sticker size (px)",
+        "value": 128,
+        "min": 16,
+        "step": 1
+    },
+
+    "__avatar": "<===========================================================>",
+
+    "showAvatar": {
+        "type": "switch",
+        "group": "Avatar",
+        "label": "Show avatar",
+        "value": true
+    },
+    "avatarSize": {
+        "type": "number",
+        "group": "Avatar",
+        "label": "Size (px)",
+        "value": 32,
+        "min": 8,
+        "step": 1
+    },
+    "avatarRadius": {
+        "type": "number",
+        "group": "Avatar",
+        "label": "Corner radius (px)",
+        "value": 6,
+        "min": 0,
+        "step": 1
+    },
+
+    "__animation": "<========================================================>",
+
+    "entryAnimation": {
+        "type": "dropdown",
+        "group": "Animation",
+        "label": "Entry animation",
+        "value": "fadeInUp",
+        "options": {
+            "none": "None",
+            "fadeIn": "Fade in",
+            "fadeInUp": "Fade in up",
+            "fadeInLeft": "Fade in left",
+            "fadeInRight": "Fade in right",
+            "slideInUp": "Slide in up",
+            "slideInLeft": "Slide in left",
+            "slideInRight": "Slide in right",
+            "zoomIn": "Zoom in",
+            "bounceIn": "Bounce in",
+            "backInUp": "Back in up",
+            "backInLeft": "Back in left",
+            "backInRight": "Back in right"
+        }
+    },
+    "entryAnimationDuration": {
+        "type": "number",
+        "group": "Animation",
+        "label": "Entry duration (ms)",
+        "value": 400,
+        "min": 0,
+        "step": 50
+    },
+    "exitAnimation": {
+        "type": "dropdown",
+        "group": "Animation",
+        "label": "Exit animation",
+        "value": "fadeOut",
+        "options": {
+            "none": "None",
+            "fadeOut": "Fade out",
+            "fadeOutUp": "Fade out up",
+            "fadeOutLeft": "Fade out left",
+            "fadeOutRight": "Fade out right",
+            "slideOutUp": "Slide out up",
+            "slideOutLeft": "Slide out left",
+            "slideOutRight": "Slide out right",
+            "zoomOut": "Zoom out",
+            "bounceOut": "Bounce out",
+            "backOutUp": "Back out up",
+            "backOutLeft": "Back out left",
+            "backOutRight": "Back out right"
+        }
+    },
+    "exitAnimationDuration": {
+        "type": "number",
+        "group": "Animation",
+        "label": "Exit duration (ms)",
+        "value": 400,
+        "min": 0,
+        "step": 50
+    },
+
+    "__filters": "<==========================================================>",
+
+    "ignoreCommands": {
+        "type": "switch",
+        "group": "Filters",
+        "label": "Ignore commands",
+        "description": "Hides messages starting with \"!\".",
+        "value": true
+    },
+    "ignoredUsers": {
+        "type": "textarea",
+        "group": "Filters",
+        "label": "Ignored users",
+        "description": "Usernames separated by comma.",
+        "value": "streamelements,streamlabs,botrix,nightbot"
+    },
+
+    "__authorRoles": "<======================================================>",
+
+    "useStaticColorForViewers": {
+        "type": "switch",
+        "group": "Author roles",
+        "label": "Static color for viewers",
+        "value": true
+    },
+    "viewersColor": {
+        "type": "colorpicker",
+        "group": "Author roles",
+        "label": "Viewers color",
+        "value": "#eef0f3"
+    },
+    "useStaticColorForSponsors": {
+        "type": "switch",
+        "group": "Author roles",
+        "label": "Static color for sponsors",
+        "value": true
+    },
+    "sponsorsColor": {
+        "type": "colorpicker",
+        "group": "Author roles",
+        "label": "Sponsors color",
+        "value": "#6aa6ff"
+    },
+    "useStaticColorForModerators": {
+        "type": "switch",
+        "group": "Author roles",
+        "label": "Static color for moderators",
+        "value": true
+    },
+    "moderatorsColor": {
+        "type": "colorpicker",
+        "group": "Author roles",
+        "label": "Moderators color",
+        "value": "#9be15d"
+    },
+    "useStaticColorForBroadcaster": {
+        "type": "switch",
+        "group": "Author roles",
+        "label": "Static color for streamer",
+        "value": true
+    },
+    "broadcasterColor": {
+        "type": "colorpicker",
+        "group": "Author roles",
+        "label": "Streamer color",
+        "value": "#ff6b6b"
+    },
+
+    "__streak": "<===========================================================>",
+
+    "streakEnabled": {
+        "type": "switch",
+        "group": "Streak",
+        "label": "Highlight streaks",
+        "description": "When off, streak messages show as regular messages.",
+        "value": true
+    },
+    "streakMinDays": {
+        "type": "number",
+        "group": "Streak",
+        "label": "Minimum days",
+        "value": 0,
+        "min": 0,
+        "step": 1
+    },
+    "streakColor": {
+        "type": "colorpicker",
+        "group": "Streak",
+        "label": "Color",
+        "value": "#f5a524"
+    },
+    "streakIcon": {
+        "type": "text",
+        "group": "Streak",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-fire"
+    },
+    "streakMessage": {
+        "type": "text",
+        "group": "Streak",
+        "label": "Label",
+        "description": "Placeholders: {streakDays}, {authorDisplayName}.",
+        "value": "{streakDays}-day streak"
+    },
+
+    "__donate": "<===========================================================>",
+
+    "donateEnabled": {
+        "type": "switch",
+        "group": "Donate",
+        "label": "Show donations",
+        "value": true
+    },
+    "donateMinValue": {
+        "type": "number",
+        "group": "Donate",
+        "label": "Minimum value",
+        "description": "Below it, the donation shows as a regular message.",
+        "value": 0,
+        "min": 0,
+        "step": 0.01
+    },
+    "donateColor": {
+        "type": "colorpicker",
+        "group": "Donate",
+        "label": "Color",
+        "value": "#2fd184"
+    },
+    "donateIcon": {
+        "type": "text",
+        "group": "Donate",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-heart"
+    },
+    "donateMessage": {
+        "type": "text",
+        "group": "Donate",
+        "label": "Label",
+        "description": "Placeholders: {value}, {currency}, {authorDisplayName}.",
+        "value": "{currency} {value}"
+    },
+
+    "__sponsor": "<==========================================================>",
+
+    "sponsorEnabled": {
+        "type": "switch",
+        "group": "Sponsor",
+        "label": "Show sponsorships",
+        "value": true
+    },
+    "sponsorColor": {
+        "type": "colorpicker",
+        "group": "Sponsor",
+        "label": "Color",
+        "value": "#6aa6ff"
+    },
+    "sponsorIcon": {
+        "type": "text",
+        "group": "Sponsor",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-star"
+    },
+    "sponsorNewMessage": {
+        "type": "text",
+        "group": "Sponsor",
+        "label": "New sponsor label",
+        "description": "Placeholders: {months}, {tier}, {authorDisplayName}.",
+        "value": "New sponsor"
+    },
+    "sponsorRenewMessage": {
+        "type": "text",
+        "group": "Sponsor",
+        "label": "Renewal label",
+        "description": "Placeholders: {months}, {tier}, {authorDisplayName}.",
+        "value": "{months} months"
+    },
+
+    "__sponsorGift": "<======================================================>",
+
+    "sponsorGiftEnabled": {
+        "type": "switch",
+        "group": "Sponsor gift",
+        "label": "Show gifted sponsorships",
+        "value": true
+    },
+    "sponsorGiftColor": {
+        "type": "colorpicker",
+        "group": "Sponsor gift",
+        "label": "Color",
+        "value": "#f06bc4"
+    },
+    "sponsorGiftIcon": {
+        "type": "text",
+        "group": "Sponsor gift",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-gift"
+    },
+    "sponsorGiftMessage": {
+        "type": "text",
+        "group": "Sponsor gift",
+        "label": "Label",
+        "description": "Placeholders: {count}, {tier}, {authorDisplayName}.",
+        "value": "Gifted {count} sponsorships"
+    },
+
+    "__raid": "<=============================================================>",
+
+    "raidEnabled": {
+        "type": "switch",
+        "group": "Raid",
+        "label": "Show raids",
+        "value": true
+    },
+    "raidColor": {
+        "type": "colorpicker",
+        "group": "Raid",
+        "label": "Color",
+        "value": "#ff9142"
+    },
+    "raidIcon": {
+        "type": "text",
+        "group": "Raid",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-users"
+    },
+    "raidMessageWithViewers": {
+        "type": "text",
+        "group": "Raid",
+        "label": "Label with viewers",
+        "description": "Placeholders: {viewerCount}, {authorDisplayName}.",
+        "value": "Raid · {viewerCount} viewers"
+    },
+    "raidMessageWithoutViewers": {
+        "type": "text",
+        "group": "Raid",
+        "label": "Label without viewers",
+        "description": "Placeholders: {authorDisplayName}.",
+        "value": "Raid"
+    },
+
+    "__cheer": "<============================================================>",
+
+    "cheerEnabled": {
+        "type": "switch",
+        "group": "Cheer",
+        "label": "Show cheers",
+        "value": true
+    },
+    "cheerMinValue": {
+        "type": "number",
+        "group": "Cheer",
+        "label": "Minimum value",
+        "description": "Below it, the cheer shows as a regular message. Cheers without value are always shown.",
+        "value": 0,
+        "min": 0,
+        "step": 1
+    },
+    "cheerColor": {
+        "type": "colorpicker",
+        "group": "Cheer",
+        "label": "Color",
+        "value": "#ad8cff"
+    },
+    "cheerIcon": {
+        "type": "text",
+        "group": "Cheer",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-gem"
+    },
+    "cheerMessageWithValue": {
+        "type": "text",
+        "group": "Cheer",
+        "label": "Label with value",
+        "description": "Placeholders: {value}, {currency}, {cheerTitle}, {authorDisplayName}.",
+        "value": "{value} {currency}"
+    },
+    "cheerMessageWithoutValue": {
+        "type": "text",
+        "group": "Cheer",
+        "label": "Label without value",
+        "description": "Placeholders: {cheerTitle}, {currency}, {authorDisplayName}.",
+        "value": "Sent {cheerTitle}"
+    },
+
+    "__redemption": "<=======================================================>",
+
+    "redemptionEnabled": {
+        "type": "switch",
+        "group": "Redemption",
+        "label": "Show redemptions",
+        "value": true
+    },
+    "redemptionColor": {
+        "type": "colorpicker",
+        "group": "Redemption",
+        "label": "Color",
+        "value": "#33d6c4"
+    },
+    "redemptionIcon": {
+        "type": "text",
+        "group": "Redemption",
+        "label": "Icon",
+        "description": "Font Awesome 5 classes.",
+        "value": "fas fa-magic"
+    },
+    "redemptionMessage": {
+        "type": "text",
+        "group": "Redemption",
+        "label": "Label",
+        "description": "Placeholders: {rewardTitle}, {rewardCost}, {authorDisplayName}.",
+        "value": "{rewardTitle} · {rewardCost}"
+    }
 }
