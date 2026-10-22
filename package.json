@@ -1,0 +1,27 @@
+{
+    "name": "@unichat-community/unichat-widget-standard",
+    "version": "0.1.0",
+    "description": "A UniChat widget standard implementation",
+    "author": "Voguh <voguhofc@protonmail.com>",
+    "license": "EPL-2.0",
+    "homepage": "https://github.com/unichat-community/unichat-widget-standard",
+    "private": true,
+    "packageManager": "pnpm@10.33.4",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development rspack build --watch",
+        "build": "cross-env NODE_ENV=production rspack build",
+        "lint": "biome check . && prettier --check ./**/*.md",
+        "typecheck": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@biomejs/biome": "2.5.15",
+        "@rspack/cli": "2.2.9",
+        "@rspack/core": "2.2.9",
+        "@types/node": "24.19.1",
+        "@voguh/unichat-api": "1.5.0-rc.0",
+        "@voguh/unichat-widgets-rspack": "0.2.2",
+        "cross-env": "10.1.0",
+        "prettier": "3.9.10",
+        "typescript": "7.0.2"
+    }
+}

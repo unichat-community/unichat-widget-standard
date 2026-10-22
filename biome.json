@@ -1,0 +1,102 @@
+{
+    "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true,
+        "root": "./"
+    },
+    "files": {
+        "includes": ["**", "!!**/{.vscode,dist,widget,node_modules,__variables.css,tsconfig.json}"]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineWidth": 120,
+        "lineEnding": "lf"
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "preset": "recommended",
+            "nursery": {
+                "useExplicitReturnType": "warn"
+            },
+            "complexity": {
+                "noUselessConstructor": "off"
+            },
+            "correctness": {
+                "noUnusedVariables": "warn"
+            },
+            "style": {
+                "useConst": "warn",
+                "noNonNullAssertion": "off",
+                "noDescendingSpecificity": "off",
+                "useConsistentObjectDefinitions": {
+                    "level": "error",
+                    "options": {
+                        "syntax": "explicit"
+                    }
+                },
+                "noRestrictedImports": {
+                    "level": "error",
+                    "options": {
+                        "patterns": [
+                            {
+                                "group": ["..", "**/..", "**/../**"],
+                                "message": "Use alias instead `../`"
+                            }
+                        ]
+                    }
+                }
+            },
+            "suspicious": {
+                "noExplicitAny": "off",
+                "noEmptyBlockStatements": "off"
+            }
+        }
+    },
+    "javascript": {
+        "formatter": {
+            "quoteStyle": "double",
+            "semicolons": "always",
+            "arrowParentheses": "always",
+            "trailingCommas": "none"
+        }
+    },
+    "css": {
+        "parser": {
+            "cssModules": true
+        }
+    },
+    "json": {
+        "formatter": {
+            "enabled": true
+        },
+        "linter": {
+            "enabled": true
+        }
+    },
+    "assist": {
+        "enabled": true,
+        "actions": {
+            "source": {
+                "organizeImports": {
+                    "level": "on",
+                    "options": {
+                        "groups": [
+                            [":NODE:"],
+                            ":BLANK_LINE:",
+                            [":PACKAGE:", "!~*/**"],
+                            ":BLANK_LINE:",
+                            ["~*/**"],
+                            ":BLANK_LINE:",
+                            ["./**", "../**"]
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

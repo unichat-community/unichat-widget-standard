@@ -1,0 +1,31 @@
+{
+    "js/ts.tsdk.path": "./node_modules/typescript/lib",
+
+    "biome.configurationPath": "./biome.json",
+
+    "[javascript]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[javascriptreact]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[typescript]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[typescriptreact]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[json]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[jsonc]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[css]": { "editor.defaultFormatter": "biomejs.biome", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll.biome": "always" } },
+    "[markdown]": { "editor.defaultFormatter": "esbenp.prettier-vscode", "editor.formatOnSave": true, "editor.codeActionsOnSave": { "source.fixAll": "always" } },
+
+    "json.schemaDownload.trustedDomains": {
+        "https://schemastore.azurewebsites.net/": true,
+        "https://raw.githubusercontent.com/microsoft/vscode/": true,
+        "https://raw.githubusercontent.com/devcontainers/spec/": true,
+        "https://www.schemastore.org/": true,
+        "https://json.schemastore.org/": true,
+        "https://spec.openapis.org/": true,
+        "https://json-schema.org/": true,
+        "https://developer.microsoft.com/json-schemas/": true,
+        "https://cdn.jsdelivr.net/gh/voguh/": true
+    },
+
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.biome": "always"
+    }
+}
