@@ -31,22 +31,6 @@ Every event can be turned off and has its own color, icon and label template. Ot
 
 Add `?obs_dock=true` to the widget URL. The chat becomes scrollable and messages are never removed by limit or lifetime.
 
-## Installation
-
-Download the latest version from [Releases](https://github.com/unichat-community/unichat-widget-standard/releases).
-
-## Development
-
-Requires Node.js 24 and pnpm 10.
-
-```sh
-pnpm install
-pnpm dev        # builds into the UniChat widgets folder and watches for changes
-pnpm build      # production build in dist/
-pnpm typecheck
-pnpm lint
-```
-
 ## License
 
 This project is free and open source under the [Eclipse Public License 2.0](./LICENSE).

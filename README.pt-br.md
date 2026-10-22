@@ -31,22 +31,6 @@ Cada evento pode ser desligado e tem cor, ícone e template de texto próprios. 
 
 Adicione `?obs_dock=true` à URL do widget. O chat passa a ter rolagem e as mensagens nunca são removidas por limite ou tempo de vida.
 
-## Instalação
-
-Baixe a última versão em [Releases](https://github.com/unichat-community/unichat-widget-standard/releases).
-
-## Desenvolvimento
-
-Requer Node.js 24 e pnpm 10.
-
-```sh
-pnpm install
-pnpm dev        # gera na pasta de widgets do UniChat e observa mudanças
-pnpm build      # build de produção em dist/
-pnpm typecheck
-pnpm lint
-```
-
 ## Licença
 
 Este projeto é gratuito e de código aberto sob a [Eclipse Public License 2.0](./LICENSE).
